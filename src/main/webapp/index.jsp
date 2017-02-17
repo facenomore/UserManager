@@ -3,6 +3,9 @@
 <html>
 <head>
     <title>User Manager</title>
+    <style>
+        <%@include file="/WEB-INF/pages/style.css" %>
+    </style>
 </head>
 <body>
 <h3>User Manager</h3>
