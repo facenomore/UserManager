@@ -1,7 +1,7 @@
 CREATE TABLE if not exists test.USER (
   ID          INT(8)      NOT NULL AUTO_INCREMENT,
   NAME        VARCHAR(25) NOT NULL,
-  AGE         INT,
+  AGE         INT         NOT NULL,
   ISADMIN     BIT         NOT NULL,
   CREATEDDATE TIMESTAMP   NOT NULL,
   PRIMARY KEY (ID))

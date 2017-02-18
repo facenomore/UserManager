@@ -2,6 +2,7 @@ package net.facenomore.UserManager.model;
 
 import javax.persistence.*;
 import java.util.Date;
+
 @Entity
 @Table(name = "USER")
 public class User {
@@ -34,7 +35,8 @@ public class User {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name == "") this.name = "Anonymous";
+        else this.name = name;
     }
 
     public int getAge() {
