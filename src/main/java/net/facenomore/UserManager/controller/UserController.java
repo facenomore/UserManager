@@ -33,12 +33,7 @@ public class UserController {
 
     @RequestMapping(value = "/users/add", method = RequestMethod.POST)
     public String addUser(@ModelAttribute("user") User user) {
-        if (user.getId() == 0) {
-            this.userService.addUser(user);
-        } else {
-            this.userService.updateUser(user);
-        }
-
+        this.userService.addOrUpdateUser(user);
         return "redirect:/users";
     }
 
