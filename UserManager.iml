@@ -18,8 +18,8 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="35861c2e-a5cd-4c2f-b329-c9429c67a651" />
-          <unit-entry name="hibernate4AnnotatedSessionFactory" value="dataSource" />
+          <unit-entry name="hibernate.cfg.xml" value="1eb28063-91ba-4e62-85a9-da7f2286bf3c" />
+          <unit-entry name="hibernate4AnnotatedSessionFactory" value="1eb28063-91ba-4e62-85a9-da7f2286bf3c" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
@@ -79,5 +79,6 @@
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.7" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.36" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:validation-api:1.1.0.Final" level="project" />
   </component>
 </module>

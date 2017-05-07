@@ -35,7 +35,7 @@ public class User {
     }
 
     public void setName(String name) {
-        if (name == "") this.name = "Anonymous";
+        if (name.equals("")) this.name = "Anonymous";
         else this.name = name;
     }
 
@@ -72,5 +72,29 @@ public class User {
                 ", admin=" + admin +
                 ", createdDate=" + createdDate +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        if (id != user.id) return false;
+        if (age != user.age) return false;
+        if (admin != user.admin) return false;
+        if (name != null ? !name.equals(user.name) : user.name != null) return false;
+        return createdDate != null ? createdDate.equals(user.createdDate) : user.createdDate == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + age;
+        result = 31 * result + (admin ? 1 : 0);
+        result = 31 * result + (createdDate != null ? createdDate.hashCode() : 0);
+        return result;
     }
 }
